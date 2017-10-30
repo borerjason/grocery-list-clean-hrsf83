@@ -17,7 +17,6 @@ class App extends React.Component {
   }
 
   addItemToGroceryList(id, quantity, name) {
-    // console.log(id, quantity, name)
     let item = {
       id: id,
       quantity: quantity,
@@ -43,7 +42,7 @@ class App extends React.Component {
     let newList = this.state.list.slice(0);
     newList.forEach( listItem => {
       if(listItem.id === item.id && item.quantity >=0) {
-        listItem.quantity = Number(item.quantity + 1); 
+        listItem.quantity = Number(item.quantity) + 1 ; 
       } 
     });
     this.setState({

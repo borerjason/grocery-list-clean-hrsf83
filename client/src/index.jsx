@@ -30,6 +30,41 @@ class App extends React.Component {
     })
   }
 
+  onClickRemoveItem(id) {
+    let updatedList = this.state.list.filter( item => {
+      return item.id !== id;
+    });
+    this.setState({
+      list: updatedList
+    })
+   }
+
+  onClickAddQuantity(item) {
+    let newList = this.state.list.slice(0);
+    newList.forEach( listItem => {
+      if(listItem.id === item.id && item.quantity >=0) {
+        listItem.quantity = Number(item.quantity + 1); 
+      } 
+    });
+    this.setState({
+      list: newList
+    });
+  }
+
+   onClickRemoveQuantity(item) {
+     let newList = this.state.list.slice(0);
+
+     newList.forEach( listItem => {
+       if(listItem.id === item.id && item.quantity >0) {
+         listItem.quantity = item.quantity - 1; 
+  
+       } 
+     })
+     this.setState({
+       list: newList
+     });
+  }
+
   render() { 
     return (
     <div>
@@ -37,7 +72,12 @@ class App extends React.Component {
         <AddGrocery addItem={(id, quantity, name) => this.addItemToGroceryList(id, quantity, name)} />
       </div>
       <div className='grocery-list'>
-        <GroceryList cart={this.state.list}/>
+        <GroceryList 
+          cart={this.state.list}
+          removeItem={(id) => this.onClickRemoveItem(id)}
+          subQuantity={(item) => this.onClickRemoveQuantity(item)}
+          addQuantity={(item) => this.onClickAddQuantity(item)}
+          />
       </div>
     </div>
     );

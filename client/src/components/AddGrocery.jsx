@@ -9,7 +9,7 @@ class AddGrocery extends React.Component {
       name: ''
     }
   }
-  incrementID() {
+  addItemToList() {
     this.props.addItem(this.state.id, this.state.quantity, this.state.name)
     let nextID = this.state.id + 1;
     this.setState({
@@ -29,11 +29,12 @@ class AddGrocery extends React.Component {
         <input 
           className="item-quantity" 
           placeholder="Add quantity"
+          value={this.state.quantity}
           onChange={(e) => this.setState({quantity: e.target.value})}  
         />
         <button 
           className="add"  
-          onClick={() => this.incrementID()}>Add</button>
+          onClick={() => this.addItemToList()}>Add</button>
 
     </div>       
 

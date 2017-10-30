@@ -5,7 +5,7 @@
 
 # Description
 Grocery List displays a list of groceries and their quantity from the database upon initial load.
-It allos users to add more groceries to the database and immediately displays new ones added.
+It allows users to add more groceries to the database and immediately displays new ones added.
 
 # The Plan
 0. Explanation of wireframe/app
@@ -17,11 +17,11 @@ It allos users to add more groceries to the database and immediately displays ne
 7. Connect server and front end
 
 # Instructions
-1. Perform a Git Fork on the repository
-2. Perform a Git Clone from your Github Repo to create a local clone of the project
-3. Change Directory to the folder where you created the clone
-4. Perform an npm install by typing 'npm install'
-5. In the same terminal window, type 'npm run react-dev'. This will start webpack for transpilation of your jsx files
+done 1. Perform a Git Fork on the repository
+done 2. Perform a Git Clone from your Github Repo to create a local clone of the project
+done 3. Change Directory to the folder where you created the clone
+done 4. Perform an npm install by typing 'npm install'
+done 5. In the same terminal window, type 'npm run react-dev'. This will start webpack for transpilation of your jsx files
 6. In a new terminal window, type 'npm run start'. This will start express web server for your site
 7. Open a browser window and enter http://localhost:3000 as the URL and you should see the main page of the site
 8. Open the code in your favorite editor and enjoy! :-0

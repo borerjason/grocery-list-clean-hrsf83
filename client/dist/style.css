@@ -18,9 +18,16 @@ body {
 .grocery-items {
   text-align: left;
   width: 300px;
+  display: flex;
+  justify-content: space-around;
 
 }
 .item-description {
-  margin-right: 10px;
-  display: inline-block;
+  margin-left: 10px;
+  width: 150px;
 }
+
+.quant {
+  margin-right: 10px;
+}
+

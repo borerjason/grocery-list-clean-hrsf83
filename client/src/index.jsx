@@ -66,8 +66,8 @@ class App extends React.Component {
 
   render() { 
     return (
-    <div>
-      <div className="add-grocery">
+    <div className="grocery-list-container">
+      <div className="grocery-header">
         <AddGrocery addItem={(id, quantity, name) => this.addItemToGroceryList(id, quantity, name)} />
       </div>
       <div className='grocery-list'>
